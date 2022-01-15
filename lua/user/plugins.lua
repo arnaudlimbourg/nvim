@@ -44,6 +44,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- Have packer manage itself
   use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
   use 'nvim-lua/plenary.nvim' -- Useful lua functions used ny lots of plugins
+  use 'lewis6991/impatient.nvim'  -- Speed up loading Lua modules in Neovim to improve startup time.
 
   -- Colorschemes
   use 'savq/melange'  -- Colorscheme I like
@@ -65,8 +66,8 @@ return packer.startup(function(use)
   use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
 
   -- Make using git easier
-  -- use 'tpope/vim-fugitive' -- Git commands in nvim
-  -- use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github
+  use 'tpope/vim-fugitive' -- Git commands in nvim
+  use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } } -- Add git related info in the signs columns and popups
 
   -- Improved editing experience
@@ -91,6 +92,10 @@ return packer.startup(function(use)
   use 'itchyny/lightline.vim' -- Fancier statusline
   use 'goolord/alpha-nvim'  -- alpha is a fast and fully customizable greeter for neovim.
   use 'kyazdani42/nvim-web-devicons'
+
+  -- Work with databases
+  use("tpope/vim-dadbod")
+  use("kristijanhusak/vim-dadbod-ui")
 
   -- Misc
   use 'folke/which-key.nvim'
