@@ -15,6 +15,7 @@ local dashboard = require("alpha.themes.dashboard")
 --     "                                                     ",
 -- }
 
+-- Hydra from https://github.com/NvChad/NvChad
 dashboard.section.header.val = {
    "                                   ",
    "                                   ",
