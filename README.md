@@ -9,6 +9,6 @@ Thanks to all plugin authors.
 
 Configuration uses Lua, see ``init.lua``
 Plugins used are found in the file ``lua/user/plugins.lua`` file.
-In a nutshell, coq for completion, telescope for finding things, chadtree for a file explorer, and more.
+In a nutshell, [coq](https://github.com/ms-jpq/coq_nvim) for completion, [telescope](https://github.com/nvim-telescope/telescope.nvim) for finding things, [chadtree](https://github.com/ms-jpq/chadtree) for a file explorer, and more.
 
-Convention from Neovim-from-scratch are used. Having all configuration in a ``user`` (name can be changed) acts as a namespace and prevents conflicts.
+Convention from [neovim from scratch](https://github.com/LunarVim/Neovim-from-scratch) are used. Having all configuration files in a ``user`` (name can be changed) acts as a namespace and prevents conflicts.
