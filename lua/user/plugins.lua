@@ -47,23 +47,22 @@ return packer.startup(function(use)
   use 'lewis6991/impatient.nvim'  -- Speed up loading Lua modules in Neovim to improve startup time.
 
   -- Colorschemes
-  use 'savq/melange'  -- Colorscheme I like
-  use 'lunarvim/darkplus.nvim'
-  use 'luisiacc/gruvbox-baby'
-  use 'titanzero/zephyrium'
+  use 'shaunsingh/nord.nvim'  -- current theme, very soothing
 
   -- Completion
-  use {'ms-jpq/coq_nvim', branch="coq"}
-  use {'ms-jpq/coq.artifacts', branch="artifacts"}
+  use {'ms-jpq/coq_nvim', branch="coq"}  -- fast autocompletion
+  use {'ms-jpq/coq.artifacts', branch="artifacts"}  -- snippets and other bits for the autocompletion engine
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
   use 'tamago324/nlsp-settings.nvim' -- language server settings defined in json for
   use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
-  use 'rafamadriz/friendly-snippets' -- Collection of snippets
+  -- use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  -- use 'rafamadriz/friendly-snippets' -- Collection of snippets
 
   -- Tests integration
-  use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+  use { 'rcarriga/vim-ultest', requires = {'vim-test/vim-test'}, run = ':UpdateRemotePlugins' }
+  use 'mfussenegger/nvim-dap'  -- debugging protocol
+  use 'mfussenegger/nvim-dap-python'  -- python debugging support
 
   -- Make using git easier
   use 'tpope/vim-fugitive' -- Git commands in nvim
@@ -91,16 +90,19 @@ return packer.startup(function(use)
   -- Spruce up neovim UI
   use 'itchyny/lightline.vim' -- Fancier statusline
   use 'goolord/alpha-nvim'  -- alpha is a fast and fully customizable greeter for neovim.
-  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-web-devicons'  -- fancy icons
+
+  -- terminal
+  use 'akinsho/toggleterm.nvim'
 
   -- Work with databases
-  use("tpope/vim-dadbod")
-  use("kristijanhusak/vim-dadbod-ui")
+  use('tpope/vim-dadbod')
+  use('kristijanhusak/vim-dadbod-ui')
 
   -- Misc
-  use 'folke/which-key.nvim'
-  use 'wakatime/vim-wakatime'
-  use 'editorconfig/editorconfig-vim'
+  use 'folke/which-key.nvim'  -- show help to see what key is mapped to which action
+  use 'wakatime/vim-wakatime'  -- track time spent (for fun only, though can be used to invoice)
+  use 'editorconfig/editorconfig-vim'  -- support for project specific coding standards
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
