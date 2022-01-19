@@ -1,7 +1,8 @@
+-- colorscheme gruvbox-baby
 vim.cmd [[
 try
   set background=dark
-  colorscheme gruvbox-baby
+  colorscheme nord
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
