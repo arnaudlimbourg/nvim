@@ -13,4 +13,7 @@ In a nutshell, [coq](https://github.com/ms-jpq/coq_nvim) for completion, [telesc
 
 Convention from [neovim from scratch](https://github.com/LunarVim/Neovim-from-scratch) are used. Having all configuration files in a ``user`` (name can be changed) acts as a namespace and prevents conflicts.
 
+Obligatory screenshot
 ![image](https://user-images.githubusercontent.com/53919/149979033-ae1c01ae-bb4c-4959-93a7-c84f18f0a34a.png)
+
+Theme is [nord](https://github.com/shaunsingh/nord.nvim) and font is [MonoLisa](https://www.monolisa.dev)
