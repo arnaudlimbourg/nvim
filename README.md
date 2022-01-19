@@ -2,7 +2,7 @@
 
 Mainly built from the amazing [neovim from scratch](https://github.com/LunarVim/Neovim-from-scratch) with accompanying [videos](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ). From [ChristianChiarulli](https://github.com/ChristianChiarulli)
 
-As per the words of @adamhjk. 
+As per the words of [adamhjk](https://github.com/adamhjk). 
 > Everything inside it remains GPLv3, though - because it's not just inspired by, it is a direct continuation of the upstream repo.
 
 Thanks to all plugin authors.
