@@ -1,4 +1,3 @@
--- colorscheme gruvbox-baby
 vim.cmd [[
 try
   set background=dark
