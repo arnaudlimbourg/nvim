@@ -56,11 +56,19 @@ return packer.startup(function(use)
   use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
   use 'tamago324/nlsp-settings.nvim' -- language server settings defined in json for
   use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
+  use 'github/copilot.vim'  -- AI model for pair programming
   -- use 'L3MON4D3/LuaSnip' -- Snippets plugin
   -- use 'rafamadriz/friendly-snippets' -- Collection of snippets
 
   -- Tests integration
-  use { 'rcarriga/vim-ultest', requires = {'vim-test/vim-test'}, run = ':UpdateRemotePlugins' }
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim"
+    }
+  }
   use 'mfussenegger/nvim-dap'  -- debugging protocol
   use 'mfussenegger/nvim-dap-python'  -- python debugging support
 
@@ -83,17 +91,18 @@ return packer.startup(function(use)
 
   -- UI to select things (files, grep results, open buffers...)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }  -- Find anything
+  use 'jvgrootveld/telescope-zoxide'  -- Operate zoxide within Neovim.
   use {'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps'}  -- File explorer
   use 'ahmedkhalf/project.nvim'  -- project management with telescope integration
-  use 'akinsho/bufferline.nvim'  -- A snazzy 💅 buffer line (with minimal tab integration)
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}  -- A snazzy 💅 buffer line (with minimal tab integration)
 
   -- Spruce up neovim UI
-  use 'itchyny/lightline.vim' -- Fancier statusline
+  use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'goolord/alpha-nvim'  -- alpha is a fast and fully customizable greeter for neovim.
   use 'kyazdani42/nvim-web-devicons'  -- fancy icons
 
   -- terminal
-  use 'akinsho/toggleterm.nvim'
+  use {'akinsho/toggleterm.nvim', branch='main'}
 
   -- Work with databases
   use('tpope/vim-dadbod')
