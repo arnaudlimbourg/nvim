@@ -94,7 +94,7 @@ return packer.startup(function(use)
   use 'jvgrootveld/telescope-zoxide'  -- Operate zoxide within Neovim.
   use {'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps'}  -- File explorer
   use 'ahmedkhalf/project.nvim'  -- project management with telescope integration
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}  -- A snazzy 💅 buffer line (with minimal tab integration)
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}  -- A snazzy 💅 buffer line (with minimal tab integration)
 
   -- Spruce up neovim UI
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
