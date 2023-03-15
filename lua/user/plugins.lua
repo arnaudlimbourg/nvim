@@ -52,8 +52,11 @@ return packer.startup(function(use)
   -- Completion
   use {'ms-jpq/coq_nvim', branch="coq"}  -- fast autocompletion
   use {'ms-jpq/coq.artifacts', branch="artifacts"}  -- snippets and other bits for the autocompletion engine
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
-  use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
+  use {
+    "williamboman/mason.nvim", -- Portable package manager for Neovim that runs everywhere Neovim runs
+    "williamboman/mason-lspconfig.nvim", -- closes some gaps that exist between mason.nvim and lspconfig
+    "neovim/nvim-lspconfig", -- Collection of configurations for built-in LSP client
+  }
   use 'tamago324/nlsp-settings.nvim' -- language server settings defined in json for
   use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
   use 'github/copilot.vim'  -- AI model for pair programming
@@ -93,7 +96,7 @@ return packer.startup(function(use)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }  -- Find anything
   use 'jvgrootveld/telescope-zoxide'  -- Operate zoxide within Neovim.
   use {'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps'}  -- File explorer
-  use 'ahmedkhalf/project.nvim'  -- project management with telescope integration
+  --[[ use 'ahmedkhalf/project.nvim'  -- project management with telescope integration ]]
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}  -- A snazzy 💅 buffer line (with minimal tab integration)
 
   -- Spruce up neovim UI
@@ -113,6 +116,7 @@ return packer.startup(function(use)
   use 'wakatime/vim-wakatime'  -- track time spent (for fun only, though can be used to invoice)
   use 'editorconfig/editorconfig-vim'  -- support for project specific coding standards
   use 'polarmutex/beancount.nvim'  -- beancount accounting files
+  use 'norcalli/nvim-colorizer.lua'  -- color highlighter
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
