@@ -52,12 +52,13 @@ return packer.startup(function(use)
   -- Completion
   use {'ms-jpq/coq_nvim', branch="coq"}  -- fast autocompletion
   use {'ms-jpq/coq.artifacts', branch="artifacts"}  -- snippets and other bits for the autocompletion engine
+
   use {
     "williamboman/mason.nvim", -- Portable package manager for Neovim that runs everywhere Neovim runs
     "williamboman/mason-lspconfig.nvim", -- closes some gaps that exist between mason.nvim and lspconfig
     "neovim/nvim-lspconfig", -- Collection of configurations for built-in LSP client
   }
-  use 'tamago324/nlsp-settings.nvim' -- language server settings defined in json for
+  -- use 'tamago324/nlsp-settings.nvim' -- language server settings defined in json for
   use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
   use 'github/copilot.vim'  -- AI model for pair programming
   use 'RRethy/vim-illuminate' -- Highlight all instances of the word under the cursor
