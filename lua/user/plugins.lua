@@ -60,6 +60,7 @@ return packer.startup(function(use)
   use 'tamago324/nlsp-settings.nvim' -- language server settings defined in json for
   use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
   use 'github/copilot.vim'  -- AI model for pair programming
+  use 'RRethy/vim-illuminate' -- Highlight all instances of the word under the cursor
   -- use 'L3MON4D3/LuaSnip' -- Snippets plugin
   -- use 'rafamadriz/friendly-snippets' -- Collection of snippets
 
