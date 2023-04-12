@@ -49,7 +49,7 @@ keymap("n", "<D-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<D-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Run tests
-keymap("n", "<leader>t", ":UltestNearest", opts)
+--[[ keymap("n", "<leader>t", ":UltestNearest", opts) ]]
 
 -- Visual --
 -- Stay in indent mode
