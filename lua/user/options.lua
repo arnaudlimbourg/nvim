@@ -37,7 +37,7 @@ local options = {
 
 vim.opt.shortmess:append "c"
 
-vim.g.python3_host_prog = "/usr/local/bin/python3"
+vim.g.python3_host_prog = "/opt/homebrew/bin/python3"
 
 for k, v in pairs(options) do
   vim.opt[k] = v
