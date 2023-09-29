@@ -48,6 +48,8 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use 'shaunsingh/nord.nvim'  -- current theme, very soothing
+  use { "catppuccin/nvim", as = "catppuccin" }  -- light theme
+  use({ 'rose-pine/neovim', as = 'rose-pine' })  -- another night theme
 
   -- Completion
   use {'ms-jpq/coq_nvim', branch="coq"}  -- fast autocompletion
