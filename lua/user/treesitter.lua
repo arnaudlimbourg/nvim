@@ -16,10 +16,6 @@ configs.setup {
     additional_vim_regex_highlighting = false,  -- catpuccin color scheme asks for it to be false
   },
   indent = { enable = true, disable = { "" } },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
   textobjects = {
     select = {
       enable = true,
