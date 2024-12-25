@@ -99,7 +99,7 @@ return packer.startup(function(use)
   -- UI to select things (files, grep results, open buffers...)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }  -- Find anything
   use 'jvgrootveld/telescope-zoxide'  -- Operate zoxide within Neovim.
-  use {'ms-jpq/chadtree', branch = 'chad', run = '/opt/homebrew/bin/python3 -m chadtree deps'}  -- File explorer
+  use {'ms-jpq/chadtree', branch = 'chad', run = '/usr/local/bin/python3 -m chadtree deps'}  -- File explorer
   use 'ahmedkhalf/project.nvim'  -- project management with telescope integration
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}  -- A snazzy 💅 buffer line (with minimal tab integration)
 
