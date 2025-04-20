@@ -48,9 +48,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<D-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<D-k>", "<Esc>:m .-2<CR>==gi", opts)
 
--- Run tests
---[[ keymap("n", "<leader>t", ":UltestNearest", opts) ]]
-
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -70,7 +67,7 @@ keymap("x", "<D-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<C-h>", "<C-t><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-t><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-t><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-t><C-N><C-w>l", term_opts)
+-- keymap("t", "<C-h>", "<C-t><C-N><C-w>h", term_opts)
+-- keymap("t", "<C-j>", "<C-t><C-N><C-w>j", term_opts)
+-- keymap("t", "<C-k>", "<C-t><C-N><C-w>k", term_opts)
+-- keymap("t", "<C-l>", "<C-t><C-N><C-w>l", term_opts)

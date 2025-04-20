@@ -49,7 +49,6 @@ require("lazy").setup({
 
   'nvim-lua/popup.nvim', -- An implementation of the Popup API from vim in Neovim
   'nvim-lua/plenary.nvim', -- Useful lua functions used ny lots of plugins
-  -- 'lewis6991/impatient.nvim'  -- Speed up loading Lua modules in Neovim to improve startup time.
 
   -- Colorschemes
   'shaunsingh/nord.nvim',  -- darkish theme
@@ -57,8 +56,8 @@ require("lazy").setup({
   { 'rose-pine/neovim', name = 'rose-pine' },  -- another light theme
 
   -- Completion
-  {'ms-jpq/coq_nvim', branch="coq"},  -- fast autocompletion
-  {'ms-jpq/coq.artifacts', branch="artifacts"},  -- snippets and other bits for the autocompletion engine
+  {'ms-jpq/coq_nvim', branch="coq", lazy = false},  -- fast autocompletion
+  {'ms-jpq/coq.artifacts', branch="artifacts", lazy = false},  -- snippets and other bits for the autocompletion engine
 
   {
     "williamboman/mason.nvim", -- Portable package manager for Neovim that runs everywhere Neovim runs
@@ -93,12 +92,12 @@ require("lazy").setup({
   'numToStr/Comment.nvim', -- Easily comment stuff
   'JoosepAlviste/nvim-ts-context-commentstring', -- setting the commentstring option based on the cursor location in the file
   'tpope/vim-repeat',  -- Repeat.vim remaps . in a way that plugins can tap into it.
-  'tpope/vim-surround', --  mappings to easily delete, change and add such surroundings in pairs
+  -- 'tpope/vim-surround', --  mappings to easily delete, change and add such surroundings in pairs
   'tweekmonster/braceless.vim', -- Text objects, folding, and more for Python and other indented languages.
   'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
   {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}, -- Highlight, edit, and navigate code using a fast incremental parsing library
   'nvim-treesitter/nvim-treesitter-textobjects', -- Additional textobjects for treesitter
-  'p00f/nvim-ts-rainbow', -- Rainbow parentheses for neovim using tree-sitter.
+  'hiphish/rainbow-delimiters.nvim', -- Rainbow parentheses for neovim using tree-sitter.
   'windwp/nvim-autopairs', -- A super powerful autopair plugin for Neovim that supports multiple characters.
 
   -- UI to select things (files, grep results, open buffers...)
@@ -107,6 +106,7 @@ require("lazy").setup({
   {'ms-jpq/chadtree', branch = 'chad', run = '/usr/local/bin/python3 -m chadtree deps'},  -- File explorer
   'ahmedkhalf/project.nvim',  -- project management with telescope integration
   {'akinsho/bufferline.nvim', version="v3.*", dependencies = 'kyazdani42/nvim-web-devicons'},  -- A snazzy 💅 buffer line (with minimal tab integration)
+  { 'echasnovski/mini.nvim', version = false },
 
   -- Spruce up neovim UI
   'nvim-lualine/lualine.nvim', -- Fancier statusline
