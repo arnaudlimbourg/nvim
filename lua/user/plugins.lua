@@ -83,7 +83,10 @@ require("lazy").setup({
   { 'echasnovski/mini.nvim', version = false },
 
   -- Spruce up neovim UI
-  'nvim-lualine/lualine.nvim', -- Fancier statusline
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  }, -- Fancier statusline
   'goolord/alpha-nvim',  -- alpha is a fast and fully customizable greeter for neovim.
   'kyazdani42/nvim-web-devicons',  -- fancy icons
 
