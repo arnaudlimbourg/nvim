@@ -5,7 +5,7 @@ end
 
 configs.setup {
   -- Change this line from a string to a list
-  ensure_installed = { "lua", "vim", "vimdoc", "python", "javascript", "typescript", "elixir" }, -- Replace with languages you actually use
+  ensure_installed = { "lua", "vim", "vimdoc", "python", "javascript", "typescript", "elixir", "toml", "yaml", "json", "tsx", "xml" }, -- Replace with languages you actually use
   -- Or use this for a more minimal set of parsers
   -- ensure_installed = {}, -- Empty list, then manually install only what you need
   
