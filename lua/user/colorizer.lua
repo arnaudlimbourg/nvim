@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 colorizer.setup({
+  'scss';
   'css';
   'javascript';
   'json';
