@@ -50,11 +50,9 @@ require("lazy").setup({
   {'ms-jpq/coq_nvim', branch="coq", lazy = false},  -- fast autocompletion
   {'ms-jpq/coq.artifacts', branch="artifacts", lazy = false},  -- snippets and other bits for the autocompletion engine
 
-  {
-    "williamboman/mason.nvim", -- Portable package manager for Neovim that runs everywhere Neovim runs
-    "williamboman/mason-lspconfig.nvim", -- closes some gaps that exist between mason.nvim and lspconfig
-    "neovim/nvim-lspconfig", -- Collection of configurations for built-in LSP client
-  },
+  { "williamboman/mason.nvim", lazy = false }, -- Portable package manager for Neovim that runs everywhere Neovim runs
+  { "williamboman/mason-lspconfig.nvim", lazy = false }, -- closes some gaps that exist between mason.nvim and lspconfig
+  { "neovim/nvim-lspconfig", lazy = false }, -- Collection of configurations for built-in LSP client
   -- 'github/copilot.vim'  -- AI model for pair programming
   'RRethy/vim-illuminate', -- Highlight all instances of the word under the cursor
   -- 'L3MON4D3/LuaSnip' -- Snippets plugin
@@ -77,7 +75,7 @@ require("lazy").setup({
 
   -- UI to select things (files, grep results, open buffers...)
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },  -- Find anything
-  {'ms-jpq/chadtree', branch = 'chad', run = '/usr/local/bin/python3 -m chadtree deps'},  -- File explorer
+  {'ms-jpq/chadtree', branch = 'chad', run = '/opt/homebrew/bin/python3 -m chadtree deps'},  -- File explorer
   'ahmedkhalf/project.nvim',  -- project management with telescope integration
   {'akinsho/bufferline.nvim', version="v3.*", dependencies = 'kyazdani42/nvim-web-devicons'},  -- A snazzy 💅 buffer line (with minimal tab integration)
   { 'echasnovski/mini.nvim', version = false },
@@ -94,6 +92,14 @@ require("lazy").setup({
   'folke/which-key.nvim',  -- show help to see what key is mapped to which action
   'wakatime/vim-wakatime',  -- track time spent (for fun only, though can be used to invoice)
   'editorconfig/editorconfig-vim',  -- support for project specific coding standards
-  'polarmutex/beancount.nvim',  -- beancount accounting files
   'norcalli/nvim-colorizer.lua',  -- color highlighter
+  {
+    'cche/todo-txt.nvim',
+    dependencies = {
+        'hrsh7th/nvim-cmp'
+    },
+    config = function()
+        require('todo-txt').setup()
+    end
+}
 })

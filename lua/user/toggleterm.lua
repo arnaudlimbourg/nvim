@@ -45,7 +45,7 @@ function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
 
-local python = Terminal:new({ cmd = "python3", hidden = true })
+local python = Terminal:new({ cmd = "/opt/homebrew/bin/python3", hidden = true })
 
 function _PYTHON_TOGGLE()
 	python:toggle()
