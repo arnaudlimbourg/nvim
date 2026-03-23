@@ -65,6 +65,8 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<D-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<D-k>", ":move '<-2<CR>gv-gv", opts)
 
+keymap("n", "<Leader>j", ":let @+ = expand('%') . ':' . line('.')<cr>", opts)
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-t><C-N><C-w>h", term_opts)
