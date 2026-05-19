@@ -1,41 +1,42 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
-  return
-end
+  local ts = require('nvim-treesitter')
 
-configs.setup {
-  -- Change this line from a string to a list
-  ensure_installed = { "lua", "vim", "vimdoc", "python", "javascript", "typescript", "elixir", "toml", "yaml", "json", "tsx", "xml" }, -- Replace with languages you actually use
-  -- Or use this for a more minimal set of parsers
-  -- ensure_installed = {}, -- Empty list, then manually install only what you need
-  
-  sync_install = false,
-  ignore_install = { "" },
-  autopairs = {
-    enable = true,
-  },
-  highlight = {
-    enable = true,
-    disable = { "" },
-    additional_vim_regex_highlighting = false,
-  },
-  indent = { enable = true, disable = { "" } },
-  textobjects = {
-    select = {
-      enable = true,
-      lookahead = true,
-      keymaps = {
-        ["af"] = "@function.outer",
-        ["if"] = "@function.inner",
-        ["ac"] = "@class.outer",
-        ["ic"] = "@class.inner",
-      },
-    },
-  },
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-    max_file_lines = nil,
+  ts.install({
+    'lua', 'vim', 'vimdoc', 'python', 'javascript', 'typescript',
+    'elixir', 'toml', 'yaml', 'json', 'tsx', 'xml',
+  })
+
+  local fts = {
+    'lua', 'vim', 'help', 'python', 'javascript', 'typescript',
+    'elixir', 'toml', 'yaml', 'json', 'tsx', 'xml',
   }
-}
 
+  vim.api.nvim_create_autocmd('FileType', {
+    pattern = fts,
+    callback = function(args)
+      pcall(vim.treesitter.start, args.buf)
+      vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
+
+  local ok, to = pcall(require, 'nvim-treesitter-textobjects')
+  if ok then
+    to.setup({
+      select = {
+        lookahead = true,
+        keymaps = {
+          ['af'] = '@function.outer',
+          ['if'] = '@function.inner',
+          ['ac'] = '@class.outer',
+          ['ic'] = '@class.inner',
+        },
+      },
+    })
+    vim.keymap.set({ 'x', 'o' }, 'af', function()
+  require('nvim-treesitter-textobjects.select').select_textobject('@function.outer', 'textobjects') end)
+    vim.keymap.set({ 'x', 'o' }, 'if', function()
+  require('nvim-treesitter-textobjects.select').select_textobject('@function.inner', 'textobjects') end)
+    vim.keymap.set({ 'x', 'o' }, 'ac', function()
+  require('nvim-treesitter-textobjects.select').select_textobject('@class.outer', 'textobjects') end)
+    vim.keymap.set({ 'x', 'o' }, 'ic', function()
+  require('nvim-treesitter-textobjects.select').select_textobject('@class.inner', 'textobjects') end)
+end

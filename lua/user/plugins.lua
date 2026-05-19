@@ -53,6 +53,7 @@ require("lazy").setup({
   { "williamboman/mason.nvim", lazy = false }, -- Portable package manager for Neovim that runs everywhere Neovim runs
   { "williamboman/mason-lspconfig.nvim", lazy = false }, -- closes some gaps that exist between mason.nvim and lspconfig
   { "neovim/nvim-lspconfig", lazy = false }, -- Collection of configurations for built-in LSP client
+  { "nvimtools/none-ls.nvim", dependencies = { "nvim-lua/plenary.nvim" } }, -- Formatters and diagnostics as LSP sources
   -- 'github/copilot.vim'  -- AI model for pair programming
   'RRethy/vim-illuminate', -- Highlight all instances of the word under the cursor
   -- 'L3MON4D3/LuaSnip' -- Snippets plugin
@@ -64,12 +65,12 @@ require("lazy").setup({
 
   -- Improved editing experience
   'numToStr/Comment.nvim', -- Easily comment stuff
-  'JoosepAlviste/nvim-ts-context-commentstring', -- setting the commentstring option based on the cursor location in the file
+  -- 'JoosepAlviste/nvim-ts-context-commentstring', -- setting the commentstring option based on the cursor location in the file
   'tpope/vim-repeat',  -- Repeat.vim remaps . in a way that plugins can tap into it.
   'tweekmonster/braceless.vim', -- Text objects, folding, and more for Python and other indented languages.
   'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
-  {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}, -- Highlight, edit, and navigate code using a fast incremental parsing library
-  'nvim-treesitter/nvim-treesitter-textobjects', -- Additional textobjects for treesitter
+  -- { 'nvim-treesitter/nvim-treesitter', branch = 'main', build = ':TSUpdate' }, --treesitter/nvim-treesitter', run = ':TSUpdate'}, -- Highlight, edit, and navigate code using a fast incremental parsing library
+  -- { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'main' }, --treesitter/nvim-treesitter-textobjects', -- Additional textobjects for treesitter
   'hiphish/rainbow-delimiters.nvim', -- Rainbow parentheses for neovim using tree-sitter.
   'windwp/nvim-autopairs', -- A super powerful autopair plugin for Neovim that supports multiple characters.
 
