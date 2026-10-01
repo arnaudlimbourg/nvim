@@ -1,5 +1,3 @@
-local coq = require("coq")
-
 local servers = {
 	"lua_ls",
 	"cssls",
@@ -41,7 +39,7 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
 
-	vim.lsp.config(name, coq.lsp_ensure_capabilities(opts))
+	vim.lsp.config(name, opts)
 end
 
 vim.lsp.enable(servers)
