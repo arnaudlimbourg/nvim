@@ -4,11 +4,13 @@ if not status_ok then
 end
 
 colorizer.setup({
-  'scss';
-  'css';
-  'javascript';
-  'json';
-  html = {
-    mode = 'foreground';
-  }
+  filetypes = {
+    'scss',
+    'css',
+    'javascript',
+    'json',
+    html = {
+      mode = 'foreground',
+    },
+  },
 })

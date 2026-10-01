@@ -93,7 +93,7 @@ require("lazy").setup({
   'folke/which-key.nvim',  -- show help to see what key is mapped to which action
   'wakatime/vim-wakatime',  -- track time spent (for fun only, though can be used to invoice)
   'editorconfig/editorconfig-vim',  -- support for project specific coding standards
-  'norcalli/nvim-colorizer.lua',  -- color highlighter
+  'catgoose/nvim-colorizer.lua',  -- color highlighter (maintained fork)
   {
     'cche/todo-txt.nvim',
     dependencies = {
